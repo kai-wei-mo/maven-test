@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.example</groupId>
+        <artifactId>base-project</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>project-custom-repo</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.bitgo.utils.kresult</groupId>
+            <artifactId>kresult-core</artifactId>
+            <version>0.1.5</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.2.1</version> <!-- Version 3.2.1 or later -->
+                <executions>
+                    <execution>
+                        <id>enforce-dependency-repository</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireDependencyRepository implementation="eu.eureka_bpo.maven.enforcer.rules.RequireDependencyRepository">
+                                    <repositoryId>jcenter-central</repositoryId>
+                                    <groupId>com.bitgo.utils.kresult</groupId>
+                                    <artifactId>kresult-core</artifactId>
+                                </requireDependencyRepository>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>eu.eureka-bpo.maven</groupId>
+                        <artifactId>require-dependency-repository</artifactId>
+                        <version>1.0.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>jcenter-central</id>
+            <name>bintray</name>
+            <url>https://jcenter.bintray.com</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>
