@@ -1,6 +1,5 @@
 https://stackoverflow.com/a/53377399
 
-seems to work well
-test true negative (download custom package from generic repo)
+This solution involves creating a separate POM file for dependencies that pull from different repository. It allows you to keep the repositories separate from the main POM file. Dependencies can only be resolved from the repositories defined in their respective POM files.
 
-TODO: for true negative, remove the repositories from .settings.xml because that's defeatnig the purpose.
+By running `make cleancache && make compile`, you can see that the dependencies are resolved from the repositories defined in their respective POM files.

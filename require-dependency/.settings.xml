@@ -17,7 +17,7 @@
     </servers>
     <profiles>
         <profile>
-            <repositories>
+            <!-- <repositories>
                 <repository>
                     <snapshots>
                         <enabled>false</enabled>
@@ -32,8 +32,8 @@
                     <name>bitgo-maven-libs-snapshot</name>
                     <url>https://private-199765120567.d.codeartifact.us-west-2.amazonaws.com/maven/bitgo-maven-libs-snapshot/</url>
                 </repository>
-            </repositories>
-            <pluginRepositories>
+            </repositories> -->
+            <!-- <pluginRepositories>
                 <pluginRepository>
                     <snapshots>
                         <enabled>false</enabled>
@@ -48,7 +48,7 @@
                     <name>bitgo-maven-libs-snapshot</name>
                     <url>https://private-199765120567.d.codeartifact.us-west-2.amazonaws.com/maven/bitgo-maven-libs-snapshot/</url>
                 </pluginRepository>
-            </pluginRepositories>
+            </pluginRepositories> -->
             <id>codeartifact</id>
         </profile>
     </profiles>

@@ -20,6 +20,7 @@
         </dependency>
     </dependencies>
 
+    <!-- if you comment this out, then the package will be fetched from https://repo.maven.apache.org/maven2 -->
     <repositories>
         <repository>
             <id>codeartifact-central</id>

@@ -1,3 +1,5 @@
 https://stackoverflow.com/a/53377399
 
-doesn't seem to work well, enforcer can't find package
+This solution is similar to `separate-pom-files` but it uses a custom Enforcer resource defined by a third party.
+
+It doesn't seem to work well, the enforcer plugin can't find resources through our custom repositories.
